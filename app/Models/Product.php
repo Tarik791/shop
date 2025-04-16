@@ -26,3 +26,4 @@ class Product extends Model
         return $this->hasManyThrough(Image::class, Variant::class, 'product_id', 'uuid', 'uuid', 'image_id');
     }
 }
+?>

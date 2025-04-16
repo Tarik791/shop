@@ -23,3 +23,4 @@ class Variant extends Model
         return $this->hasOne(Image::class, 'uuid', 'image_id');
     }
 }
+?>

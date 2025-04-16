@@ -12,3 +12,4 @@ class Image extends Model
 
     protected $fillable = ['uuid', 'url'];
 }
+?>
