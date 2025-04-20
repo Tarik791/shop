@@ -20,7 +20,7 @@ class RateLimitServiceProvider extends ServiceProvider
 
         RateLimiter::for(
             'auth',
-            static fn() => Limit::perMinute(5),
+            static fn() => Limit::perMinute(60),
         );
     }
 }
