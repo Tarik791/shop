@@ -63,7 +63,17 @@ This command will create:
 
 ---
 
-## 🧹 Step 5: Clear Shop Data (Optional)
+### 🌐 5. View the Local Application
+
+You can access the application in your browser via:
+
+```
+http://localhost:8080/
+```
+
+---
+
+## 🧹 Step 6: Clear Shop Data (Optional)
 
 To remove all generated data from the database, run:
 
