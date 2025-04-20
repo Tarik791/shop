@@ -1,41 +1,79 @@
-📦 Application Setup Guide
-Follow the steps below to build and run the application using Docker:
+# 📦 Laravel Shop Application – Setup Guide
 
-✅ 1. Build Docker Containers
-bash
+This guide provides step-by-step instructions for setting up and running the Laravel Shop application using Docker.
+
+---
+
+## ✅ Step 1: Build Docker Containers
+
+Build all necessary containers using:
+
+```bash
 docker-compose build
-This command builds all the necessary containers defined in the docker-compose.yml file.
+```
 
-🚀 2. Start the Application
-bash
+This command compiles the Docker environment as defined in the `docker-compose.yml` file.
+
+---
+
+## 🚀 Step 2: Start the Application
+
+Start all containers and run the application with:
+
+```bash
 docker-compose up
-This starts all containers and runs the application.
+```
 
-🛠 3. Run Database Migrations
-Open a terminal session inside the running container:
+---
 
-bash
+## 🛠 Step 3: Run Database Migrations
+
+Access the application container by running:
+
+```bash
 docker exec -it shop-app-1 bash
-Then run the following command to migrate and reset the database:
+```
 
-bash
+Inside the container, run the following command to reset and migrate the database:
+
+```bash
 php artisan migrate:fresh
-After that, you can exit the container with:
+```
 
-bash
+After the migrations complete, you can exit the container:
+
+```bash
 exit
-🧪 4. Generate Dummy Shop Data
-Run the following Artisan command from your host machine:
+```
 
-bash
+---
+
+## 🧪 Step 4: Generate Dummy Shop Data
+
+From your **host machine**, generate sample products, variants, and images using the following Artisan command:
+
+```bash
 php artisan app:generate-dummy-shop-data --products=100 --variants=2000 --images=200
-This will generate 100 products, each with multiple variants and images.
+```
 
-🧹 5. Clear Shop Data (Optional)
-If you want to clear all the generated shop data, you can run the following Artisan command:
+This command will create:
+- 100 products
+- 2000 variants
+- 200 images
 
-bash
+---
+
+## 🧹 Step 5: Clear Shop Data (Optional)
+
+To remove all generated data from the database, run:
+
+```bash
 php artisan app:clear-shop-data
-This will delete all the products, variants, and images from the database.
+```
 
-Your application is now ready with sample shop data, or cleared if you ran the cleanup command. ✅
+This will delete all products, variants, and related images.
+
+---
+
+✅ Your Laravel Shop application is now ready with sample data or cleaned up using the optional command.  
+Feel free to contribute, test, or explore the project further!
