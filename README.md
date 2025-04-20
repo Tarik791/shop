@@ -39,7 +39,7 @@ docker exec -it shop-app-1 bash
 Inside the container, run the following command to reset and migrate the database:
 
 ```bash
-php artisan migrate:fresh
+php artisan migrate:fresh --seed
 ```
 
 After the migrations complete, you can exit the container:
