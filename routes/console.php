@@ -9,5 +9,5 @@ Artisan::command('inspire', function () {
 })->purpose('Display an inspiring quote');
 
 Artisan::command('schedule:daily', function (Schedule $schedule) {
-    $schedule->command('generate:generate-dummy-shop-data')->daily();
+    $schedule->command('app:generate-dummy-shop-data')->daily();
 });
