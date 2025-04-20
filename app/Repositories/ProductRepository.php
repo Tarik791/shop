@@ -24,14 +24,9 @@ class ProductRepository
         ->first();
     }
 
-    public function getAllProductsWithRelationsApi()
+    public function getAllProductsForApi()
     {
-        return Product::with([
-                'variants',        
-                'variants.image',
-                'images'
-            ])
-            ->cursor();
+        return Product::with(['variants', 'variants.image', 'images'])->cursor();
     }
 }
 ?>
