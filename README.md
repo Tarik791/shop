@@ -1,5 +1,7 @@
 # 📦 Laravel Shop Application – Setup Guide
 
+This Laravel application serves as the **main shop system**, which allows you to generate, store, and view products with their associated variants and images. It is ideal for testing and demonstration purposes. The application uses Docker for containerized development and local deployment.
+
 This guide provides step-by-step instructions for setting up and running the Laravel Shop application using Docker.
 
 ---
